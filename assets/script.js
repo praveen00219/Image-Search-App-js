@@ -52,13 +52,20 @@ async function fetchImages() {
         "shadow-lg",
         "transition-transform",
         "duration-300",
-        "hover:scale-105",
         "fade-in"
       );
 
+      const description = image.alt_description
+        ? image.alt_description
+        : "No description available";
+      const descElement = document.createElement("p");
+      descElement.textContent = description;
+      descElement.classList.add("mt-2", "text-center", "text-gray-600");
+
       const imageWrapper = document.createElement("div");
-      imageWrapper.classList.add("relative");
+      imageWrapper.classList.add("relative", "image-wrapper");
       imageWrapper.appendChild(imgElement);
+      imageWrapper.appendChild(descElement);
 
       imagesContainer.appendChild(imageWrapper);
     });
