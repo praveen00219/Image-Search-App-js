@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <div class="text-center mb-6">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Image Search App</h1>
+            <form id="searchForm" class="mb-4">
+                <input type="text" id="searchInput" placeholder="Search for images..."
+                    class="p-2 w-full md:w-1/2 mx-auto border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <button type="submit"
+                    class="mt-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
+                    Search
+                </button>
+            </form>
+        </div>
+        <div id="imagesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Images will be injected here -->
+        </div>
+        <div id="showMoreContainer" class="text-center mt-6">
+            <button id="showMoreButton"
+                class="px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-300">
+                Show More
+            </button>
+        </div>
+    </div>
+    <script src="/assets/script.js"></script>
+</body>
+
+</html>
